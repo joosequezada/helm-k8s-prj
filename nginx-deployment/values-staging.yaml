@@ -11,7 +11,9 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.18.0-alpine"
+  tag: "1.18.0"
+  #tag: "1.18.0-alpine"
+
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious

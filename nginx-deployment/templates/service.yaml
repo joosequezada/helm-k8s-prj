@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 8111
   selector:
-    app: nginx
+    app: nginx-deployment
   type: {{ .Values.service.type }}

@@ -1,0 +1,34 @@
+# Default values for Nginx_Chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace:
+ name: prod
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.17.0"
+
+service:
+  port: 80
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+   limits:
+     cpu: 70m
+     memory: 256Mi
+   requests:
+     cpu: 70m
+     memory: 256Mi
+
+release: "1.17.0"
+
+nodeSelector: {}
+

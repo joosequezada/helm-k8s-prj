@@ -3,4 +3,5 @@ data:
   version: {{ .Values.release }}
 kind: ConfigMap
 metadata:
+  name: nginx-deployment
   namespace: {{ .Values.namespace.name }}

@@ -4,7 +4,7 @@ image:
   repository: nginx
   tag: "1.17.0"
 namespace: 
-  name: prod
+  name: production
 release: "1.17.0"
 replicaCount: 2
 resources: 

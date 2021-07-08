@@ -11,7 +11,7 @@ spec:
  source:
    helm:
      valueFiles:
-      - values.yaml
-   path: nginx-deployment
+      - values-staging.yaml
+   path: nginx-deployment 
    repoURL: https://github.com/joosequezada/helm-k8s-prj
    targetRevision: master

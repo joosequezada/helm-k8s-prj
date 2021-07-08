@@ -8,7 +8,7 @@ image:
   pullPolicy: IfNotPresent
   tag: "1.18.0"
 
-resources: 
+resources: {} 
    limits:
      cpu: 50m
      memory: 128Mi

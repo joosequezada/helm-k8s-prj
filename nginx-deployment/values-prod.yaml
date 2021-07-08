@@ -1,0 +1,23 @@
+namespace:
+ name: prod
+
+replicaCount: 2
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: "1.17.0"
+
+service:
+  port: 80
+
+resources: {}
+   limits:
+     cpu: 70m
+     memory: 256Mi
+   requests:
+     cpu: 70m
+     memory: 256Mi
+
+release: "1.17.0"
+

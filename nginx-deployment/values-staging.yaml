@@ -5,7 +5,7 @@ namespace:
 image: 
   pullPolicy: IfNotPresent
   repository: nginx
-  tag: "1.18.0"
+  tag: "alpine"
 
 replicaCount: 1
 
@@ -22,4 +22,4 @@ service:
   type: ClusterIP
 
 configmap:
-   data: "version: 1.18.0"
+  data: "version: 1.18.0"

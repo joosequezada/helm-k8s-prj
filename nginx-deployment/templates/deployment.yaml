@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx-deployment
+    app: nginx
   name: nginx-deployment
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: nginx-deployment
+      app: nginx
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,9 +18,11 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx-deployment
+        app: nginx
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-        imagePullPolicy: IfNotPresent
-        name: nginx-deployment
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: nginx-alpine
+        resources:
+{{ toYaml .Values.resources | indent 12 }}

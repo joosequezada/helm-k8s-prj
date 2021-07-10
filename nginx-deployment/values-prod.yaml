@@ -3,10 +3,12 @@ image:
   pullPolicy: IfNotPresent
   repository: nginx
   tag: "1.17.0"
+
 namespace: 
   name: production
-release: "1.17.0"
+
 replicaCount: 2
+
 resources: 
   limits: 
     cpu: 70m
@@ -14,5 +16,10 @@ resources:
   requests: 
     cpu: 70m
     memory: 256Mi
+
 service: 
   port: 80
+  type: ClusterIP
+
+configmap:
+  data: "version: 1.17.0"

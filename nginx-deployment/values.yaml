@@ -1,11 +1,13 @@
+namespace: 
+  name: demo
+
 image: 
   pullPolicy: IfNotPresent
   repository: nginx
   tag: "alpine"
-namespace: 
-  name: demo
-release: "alpine"
+
 replicaCount: 3
+
 resources: 
   limits: 
     cpu: 50m
@@ -13,6 +15,10 @@ resources:
   requests: 
     cpu: 50m
     memory: 256Mi
+
 service: 
   port: 8111
   type: ClusterIP
+
+configmap:
+  data: "version: alpine"

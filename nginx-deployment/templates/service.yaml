@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: nginx
-  name: nginx-deployment
+  name: nginx-alpine
   namespace: {{ .Values.namespace.name }}
 spec:
   ports:

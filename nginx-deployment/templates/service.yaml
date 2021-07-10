@@ -9,7 +9,7 @@ spec:
   ports:
   - port: {{ .Values.service.port }}
     protocol: TCP
-    targetPort: {{ .Values.service.port }}
+    #targetPort: {{ .Values.service.port }}
   selector:
     app: nginx
   type: {{ .Values.service.type }}

@@ -19,7 +19,7 @@ resources:
 
 service: 
   port: 80
-  type: ClusterIP
+  type: NodePort
 
 configmap:
   data: "version: 1.17.0"
